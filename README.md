@@ -17,4 +17,5 @@ myPalet <- RColorBrewer::brewer.pal(length(df$group), name = 'Set2')
 parliament_plot <- semicircle_diag(df$group, df$value, myPalet, sort_order = 'descending')
 print(parliament_plot)
 ```
-
+Результат:
+![alt text](https://github.com/SerhEL/SemicircularDiagram/blob/main/result.jpg?raw=true)
