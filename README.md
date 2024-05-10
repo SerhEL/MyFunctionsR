@@ -5,7 +5,7 @@
 ```R
 library(ggforce)
 library(tidyverse)
-source('semicircle_diag', encoding = "utf-8")
+source('semicircle_diag.r', encoding = "utf-8")
 
 df <- data.frame(
   group = c('A', 'V', 'C'),
