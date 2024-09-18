@@ -19,3 +19,20 @@ print(parliament_plot)
 ```
 Результат:
 ![alt text](https://github.com/SerhEL/SemicircularDiagram/blob/main/result.jpg?raw=true)
+
+
+# RepairFastqc
+Востанавливает структуру FASTQC файлов
+
+## Пример
+```R
+source('repair_fastq.r', encoding = "utf-8")
+
+f <- list.files('.', pattern = '.fastq')
+f <- f[-grep('gz', f)]
+n <- gsub('.fastq', '_repaired.fq', f)
+
+for(i in seq_along(f)) {
+  repair_fastq(f[i], n[i])  
+}
+```
