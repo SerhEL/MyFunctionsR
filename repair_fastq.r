@@ -13,6 +13,10 @@ repair_fastq <- function(input, output) {
     repaired_read[2] <- paste0(read_data[2], read_data[3])  # Объединение последовательностей
     repaired_read[3] <- read_data[4]                    # Плюс строка
     repaired_read[4] <- paste0(read_data[5], read_data[6])  # Объединение качественных оценок
+
+    # Удаляем символы возврата каретки \r
+    repaired_read <- gsub("\r", "", repaired_read)
+    
     writeLines(repaired_read, wcon)                     # Запись результата в новый файл
     
     if (read_count == 1) {
