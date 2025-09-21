@@ -124,3 +124,7 @@ search_accessions_safe <- function(accessions, len_object = 100, retries = 10, s
   }
 }
 ```
+# Функция для простой чистки ридов по количеству N и GC составу
+```R
+fastq_gcN_filter('S250093277_L01_96_1.fq.gz', 'S250093277_L01_96_2.fq.gz', 'S250093277_L01_96')
+```
