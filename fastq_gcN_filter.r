@@ -29,16 +29,16 @@ fastq_gcN_filter <- function(read1, read2 = NULL, pfile = 'out', pN = 0, GC = c(
     return(bad)
   }
   
-  len_read <- length(con_L1) / 4
+  len_read <- length(con_l1) / 4
   for (i in seq_len(len_read)) {
     p1 <- i * 4 - 3
     p4 <- i * 4
     
-    st1 <- con_L1[p1:p4]
+    st1 <- con_l1[p1:p4]
     bad1 <- check_seq_gcN(st1[2], pN, GC)
     
     if (!is.null(read2)) {
-      st2 <- con_L2[p1:p4]
+      st2 <- con_l2[p1:p4]
       bad2 <- check_seq_gcN(st2[2], pN, GC)
       
       if (!bad1 && !bad2) {
