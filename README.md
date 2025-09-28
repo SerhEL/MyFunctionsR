@@ -1,3 +1,13 @@
+# Функция для записи последовательности в одну строку:
+```R
+write_fasta <- function(x, file) {
+  name <- trimws(paste0('>', names(x)))
+  seqs <- as.character(x)
+  nase <- paste(name, seqs, sep = '\n')
+  write(nase, file = file)
+}
+```
+
 # SemicircularDiagram
 Улучшенная версия полукруглой диаграммы https://stackoverflow.com/a/47738295/22134124
 
